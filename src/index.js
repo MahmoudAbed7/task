@@ -45,7 +45,7 @@ window.addCart = (item) => {
     Todo.create(data).then(response => {
         var parentTr = document.createElement('tr')
         var titleElement = window.htmlToElement(`<td id="title">${response.data.title}</td>`)
-        var priceElement = window.htmlToElement(`<td id="price">${response.data.price}</td>`)
+        var priceElement = window.htmlToElement(`<td id="price">${response.data.price}$</td>`)
         var btnElement = window.htmlToElement(`<td><button type="submit" class="btn btn-danger btn-sm ms-3">x</button></td>`)
         btnElement.addEventListener('click', () => deleteItem())
         parentTr.appendChild(titleElement)
